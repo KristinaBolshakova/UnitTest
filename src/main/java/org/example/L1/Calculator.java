@@ -1,13 +1,42 @@
 package org.example.L1;
 
+import java.util.Scanner;
+
 public class Calculator {
 
-//    public static void main(String[] args) {
-//        System.out.printf("Результат операции: %s\n", calculation(2, 2, '+'));
-//        System.out.printf("Результат операции: %s\n", calculation(4, 2, '-'));
-//        System.out.printf("Результат операции: %s\n", calculation(8, 2, '/'));
-//        System.out.printf("Результат операции: %s\n", calculation(3, 2, '*'));
-//    }
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int firstOperand = getOperand();
+        int secondOperand = getOperand();
+        char operator = getOperator();
+        int result = calculation(firstOperand, secondOperand, operator);
+        System.out.println("Результат операции: " + result);
+    }
+
+    public static char getOperator(){
+        System.out.println("Введите операцию: ");
+        char operation = scanner.next().charAt(0);
+        return operation;
+    }
+
+    public static int getOperand(){
+        System.out.println("Введите число: ");
+        int operand;
+
+        if (scanner.hasNextInt()){
+           operand = scanner.nextInt();
+        } else {
+            System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
+            if (scanner.hasNextInt()) {
+                scanner.next();
+                operand = getOperand();
+            } else {
+                throw new IllegalArgumentException("Ошибка в вводимых данных");
+            }
+        }
+        return operand;
+    }
 
     public static int calculation(int firstOperand, int secondOperand, char operator) {
         int result = 0;
