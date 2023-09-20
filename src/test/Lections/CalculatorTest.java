@@ -1,7 +1,6 @@
-package L1;
+package Lections;
 
-import org.assertj.core.api.Assertions;
-import org.example.L1.Calculator;
+import org.example.Lections.Calculator;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;

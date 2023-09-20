@@ -1,4 +1,4 @@
-package org.example.L1;
+package org.example.Lections;
 
 import java.util.Scanner;
 
