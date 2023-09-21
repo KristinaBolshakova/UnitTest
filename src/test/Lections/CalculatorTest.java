@@ -13,32 +13,32 @@ public class CalculatorTest {
 
     @Test
     void evaluatesExpression() {
-        Calculator calculator = new Calculator();
-        assertThat(calculator.calculation(2, 6, '+')).isEqualTo(8);
+//        Calculator calculator = new Calculator();
+        assertThat(Calculator.calculation(2, 6, '+')).isEqualTo(8);
     }
 
     @Test
     void subsctractionExpression() {
-        Calculator calculator = new Calculator();
-        assertThat(calculator.calculation(2, 1, '-')).isEqualTo(1);
+//        Calculator calculator = new Calculator();
+        assertThat(Calculator.calculation(2, 1, '-')).isEqualTo(1);
     }
 
     @Test
     void multiplicationExpression() {
-        Calculator calculator = new Calculator();
-        assertThat(calculator.calculation(2, 4, '*')).isEqualTo(8);
+//        Calculator calculator = new Calculator();
+        assertThat(Calculator.calculation(2, 4, '*')).isEqualTo(8);
     }
 
     @Test
     void divisionExpression() {
-        Calculator calculator = new Calculator();
-        assertThat(calculator.calculation(8, 2, '/')).isEqualTo(4);
+//        Calculator calculator = new Calculator();
+        assertThat(Calculator.calculation(8, 2, '/')).isEqualTo(4);
     }
 
     @Test
     void expectedIllegalStateExceptionOnIInvalidOperatorSymbol(){
-        Calculator calculator = new Calculator();
-        assertThatThrownBy(() -> calculator.calculation(8, 4, '_'))
+//        Calculator calculator = new Calculator();
+        assertThatThrownBy(() -> Calculator.calculation(8, 4, '_'))
                 .isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -64,10 +64,15 @@ public class CalculatorTest {
         System.setIn(in);
         System.setOut(new PrintStream(out));
 
-        assertThatThrownBy(() -> Calculator.getOperand()).isInstanceOf(IllegalArgumentException.class)
+        assertThatThrownBy(Calculator::getOperand).isInstanceOf(IllegalArgumentException.class)
                         .describedAs("Ошибка в вводимых данных");
 
         System.setIn(inputStream);
         System.setOut(null);
+    }
+
+    @Test
+    void computeCircleRadiusWorksCorrectly() {
+        assertThat(Calculator.computeAreaCircle(10)).isEqualTo(314.1592653589793);
     }
 }

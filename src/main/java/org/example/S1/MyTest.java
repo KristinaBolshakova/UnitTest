@@ -3,7 +3,7 @@ package org.example.S1;
 // Импортируем необходимые классы из библиотек
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 public class MyTest {
     // Создаем класс MyTest, в котором будут размещены тесты

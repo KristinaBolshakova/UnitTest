@@ -16,8 +16,7 @@ public class Calculator {
 
     public static char getOperator(){
         System.out.println("Введите операцию: ");
-        char operation = scanner.next().charAt(0);
-        return operation;
+        return scanner.next().charAt(0);
     }
 
     public static int getOperand(){
@@ -39,7 +38,7 @@ public class Calculator {
     }
 
     public static int calculation(int firstOperand, int secondOperand, char operator) {
-        int result = 0;
+        int result;
 
         switch (operator) {
             case '+':
@@ -62,5 +61,9 @@ public class Calculator {
                 throw new IllegalArgumentException("Unexpected value operator: " + operator);
         }
         return result;
+    }
+
+    public static double computeAreaCircle(double radius) {
+        return Math.PI * Math.pow(radius, 2);
     }
 }
