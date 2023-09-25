@@ -36,7 +36,7 @@ class VehicleTest {
      */
     @Test
     public void testCarHaveFourWheels(){
-        assertEquals(4, car.getNumWheels());
+        assertThat(car.getNumWheels()).isEqualTo(4);
     }
 
     /**
@@ -44,7 +44,7 @@ class VehicleTest {
      */
     @Test
     public void testMotorcycleHaveTwoWheels() {
-        assertEquals(2, motorcycle.getNumWheels());
+        assertThat(motorcycle.getNumWheels()).isEqualTo(2);
     }
 
     /**
@@ -53,7 +53,7 @@ class VehicleTest {
     @Test
     public void testCarSpeed() {
         car.testDrive();
-        assertEquals(60, car.getSpeed());
+        assertThat(car.getSpeed()).isEqualTo(60);
     }
 
     /**
@@ -62,7 +62,7 @@ class VehicleTest {
     @Test
     public void testMotorcycleSpeed(){
         motorcycle.testDrive();
-        assertEquals(75, motorcycle.getSpeed());
+        assertThat(motorcycle.getSpeed()).isEqualTo(75);
     }
 
     /**
@@ -73,7 +73,7 @@ class VehicleTest {
     public void testParkCar(){
         car.testDrive();
         car.park();
-        assertEquals(0, car.getSpeed());
+        assertThat(car.getSpeed()).isEqualTo(0);
     }
 
     /**
@@ -84,7 +84,7 @@ class VehicleTest {
     public void testParkMotorcycle(){
         motorcycle.testDrive();
         motorcycle.park();
-        assertEquals(0, motorcycle.getSpeed());
+        assertThat(motorcycle.getSpeed()).isEqualTo(0);
     }
 
 
