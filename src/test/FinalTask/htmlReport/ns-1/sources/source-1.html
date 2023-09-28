@@ -1,0 +1,134 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Average</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">seminars.HW_6</a>
+</div>
+
+<h1>Coverage Summary for Class: Average (seminars.HW_6)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Average</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (1/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92,9%
+  </span>
+  <span class="absValue">
+    (13/14)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package seminars.HW_6;
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;public class Average {</b>
+&nbsp;
+&nbsp;    public static String averageArrays(int[] arr1, int[] arr2) {
+&nbsp;        float avgArr1;
+&nbsp;        float avgArr2;
+<b class="fc">&nbsp;        int sumArr1 = 0;</b>
+<b class="fc">&nbsp;        int sumArr2 = 0;</b>
+&nbsp;
+<b class="fc">&nbsp;        for (int num : arr1) {</b>
+<b class="fc">&nbsp;            sumArr1 += num;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        for (int num : arr2) {</b>
+<b class="fc">&nbsp;            sumArr2 += num;</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        avgArr1 = (float) sumArr1 / arr1.length;</b>
+<b class="fc">&nbsp;        avgArr2 = (float) sumArr2 / arr2.length;</b>
+&nbsp;
+<b class="fc">&nbsp;        if (avgArr1 &gt; avgArr2) {</b>
+<b class="fc">&nbsp;            return &quot;Первый список имеет большее среднее значение&quot;;</b>
+<b class="fc">&nbsp;        } else if (avgArr2 &gt; avgArr1) {</b>
+<b class="fc">&nbsp;            return &quot;Второй список имеет большее среднее значение&quot;;</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            return &quot;Средние значения равны&quot;;</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-09-28 15:56</div>
+</div>
+</body>
+</html>
